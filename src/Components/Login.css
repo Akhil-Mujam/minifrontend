@@ -1,0 +1,9 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+
+.bdy{
+    background-image: url('https://www.chartrequest.com/wp-content/uploads/2018/11/iStock-927897070.jpg');
+  background-attachment: fixed;
+}

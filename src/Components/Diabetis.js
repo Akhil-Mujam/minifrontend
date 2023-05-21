@@ -17,25 +17,23 @@ const Diabetis = () => {
     e.preventDefault();
     const endpoint="http://localhost:8000/diabetesprediction"
     axios.post(endpoint,{
-          Preg:Preg,
-          glu:glu,
-          bp:bp,
-          skt:skt,
-          ins:ins,
-          bmi:bmi,
-          dpf:dpf,
-          age:age
+            Pregnancies:Preg,
+            Glucose:glu,
+            BloodPressure:bp,
+            SkinThickness:skt,
+            Insulin:ins,
+            BMI:bmi,
+            DiabetesPedigreeFunction:dpf,
+            Age:age
+          
     }).then(
       (res)=>{
         console.log(res.data)
         
         setresult(res.data)
-        // if(result=='The Person has Diabetes')
-        // {
-        //    setinfo("person")
-        // }
+        
       axios.post('http://localhost:5000/diabetisdata',{
-        Preg:Preg,
+          Preg:Preg,
           glu:glu,
           bp:bp,
           skt:skt,
@@ -47,6 +45,7 @@ const Diabetis = () => {
       }).then(
         (arr) =>{
           console.log(arr.data)
+
         }
       )
       }
@@ -124,6 +123,11 @@ const Diabetis = () => {
         <button type="submit" class="btn btn-success mt-3 d-flex justify-content-center ">Submit</button>
       </form>
       </div>
+      <div>
+          <center><h1>{result}</h1> </center>
+          {/* {result === "The Person has Diabetes" ? <div><h4>Diet recommendation</h4></div> : null} */}
+      </div>
+     
     {/* <form onSubmit={SubmitHandler}>
         <div>
       <label>No_Of_Pregnancies</label>

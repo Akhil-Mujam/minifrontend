@@ -46,7 +46,7 @@ const HeartData = () => {
                 setresult(res.data)
                 
                 axios.post('http://localhost:5000/heartdata',{
-                    age:age,
+                age:age,
             sex:sex,
             cp:cp,
             trestbps:trestbps,
@@ -66,7 +66,9 @@ const HeartData = () => {
                     }
                 )
             }
-        )
+        ).catch((err)=>{
+          console.log(err)
+        })
 
 
     }
@@ -163,6 +165,13 @@ const HeartData = () => {
         <div class="form-group">
               <label for="thal">thal</label>
               <input type="text" class="form-control" id="thal"  onChange={(e)=>{setthal(e.target.value)}} placeholder="Enter age" />
+              
+            </div>
+        </div>
+        <div class="col-md-4">
+        <div class="form-group">
+              <label for="thal">Sex</label>
+              <input type="text" class="form-control" id="thal"  onChange={(e)=>{setsex(e.target.value)}} placeholder="Enter age" />
               
             </div>
         </div>

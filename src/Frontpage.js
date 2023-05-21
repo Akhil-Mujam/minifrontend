@@ -1,5 +1,6 @@
 import React from 'react'
 import './Front.css'
+import { Link } from 'react-router-dom'
 
 
 const Frontpage = () => {
@@ -9,9 +10,9 @@ const Frontpage = () => {
        <div class="container cd">
         
          
-            <button class="btn btn-dark text-white  " >Sign-Up</button>
+            <button class="btn btn-dark text-white  " ><Link to={'/login'}>Login</Link></button>
            
-           <button class="btn btn-dark text-white" >login-in</button> 
+           <button class="btn btn-dark text-white" ><Link to={'register'}>Sign-up</Link></button> 
         
         
          

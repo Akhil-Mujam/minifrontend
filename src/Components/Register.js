@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import swal from 'sweetalert'
 import { TextField} from '@mui/material'
-
+import './Login.css'
 const Register = () => {
   const submitHandler =(e) =>{
     e.preventDefault();
@@ -72,40 +72,40 @@ const Register = () => {
                 <img src="https://c8.alamy.com/comp/2BKNARJ/a-man-stands-in-front-of-inputted-secured-data-registration-form-or-login-user-interface-isometric-flat-vector-illustration-of-infographic-elements-2BKNARJ.jpg" class="img-fluid" />
             </div>
         
-        <div class=" col-md-6 reg  text-success p-4">
+        <div class=" col-md-6 reg p-4 colr">
             <center><h2>Register</h2></center> <br/> 
             <form onSubmit={submitHandler}>        
            <div class="row justify-content-center">
                <div class="col-md-8">
-               <TextField id="standard-basic"  fullWidth  label="Name" variant="standard" placeholder="enter your name" required onChange={(e) =>{ setname(e.target.value)}} />
+               <TextField id="standard-basic"  fullWidth  label="Name" variant="standard" placeholder="Enter your name" required onChange={(e) =>{ setname(e.target.value)}} />
                    {/* <input type="text" class="form-control mx-auto text-center w-60" placeholder="enter your name" required onChange={(e) =>{ setname(e.target.value)}}/> */}
                </div>
            </div>
            <br/>
            <div class="row justify-content-center">
                <div class="col-md-8">
-               <TextField id="standard-basic" fullWidth label="Email" FullWidth required placeholder="enter your email" onChange={(e) =>{ setemail(e.target.value)}} variant="standard" />
+               <TextField id="standard-basic" fullWidth label="Email" FullWidth required placeholder="Enter your email" onChange={(e) =>{ setemail(e.target.value)}} variant="standard" />
                    {/* <input type="email" class="form-control mx-auto text-center w-60" placeholder="enter your email" required onChange={(e) =>{ setemail(e.target.value)}}/> */}
                </div>
            </div>
            <br/>
            <div class="row justify-content-center">
                <div class="col-md-8">
-               <TextField id="standard-basic" fullWidth label="password" variant="standard" placeholder="enter password" required onChange={(e) =>{ setpassword(e.target.value)}}/>
+               <TextField id="standard-basic" fullWidth label="Password" variant="standard" placeholder="Enter password" required onChange={(e) =>{ setpassword(e.target.value)}}/>
                    {/* <input type="password" class="form-control mx-auto text-center w-60" placeholder="enter password" required onChange={(e) =>{ setpassword(e.target.value)}}/> */}
                </div>
            </div>
            <br/>
            <div class="row justify-content-center">
                <div class="col-md-8">
-               <TextField id="standard-basic" fullWidth type="password" label="cpassword" required placeholder="confirm password" onChange={(e) =>{ setcpassword(e.target.value)}} variant="standard" />
+               <TextField id="standard-basic" fullWidth type="password" label="Confirm Password" required placeholder="Confirm password" onChange={(e) =>{ setcpassword(e.target.value)}} variant="standard" />
                    {/* <input type="password" class="form-control mx-auto text-center w-60"  required placeholder="confirm password" onChange={(e) =>{ setcpassword(e.target.value)}}/> */}
                </div>
            </div>
            <br/>
            <div class="row text-center ">
                <div class="col-md-8 mx-auto">
-                      <button class="btn btn-success ">SUBMIT</button>
+                      <button class="ch">Register</button>
                </div>
            </div>
            </form>

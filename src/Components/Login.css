@@ -7,3 +7,20 @@
     background-image: url('https://www.chartrequest.com/wp-content/uploads/2018/11/iStock-927897070.jpg');
   background-attachment: fixed;
 }
+
+.g{
+  margin-left:159px;
+}
+.colr {
+  color:#8772ee;
+}
+
+.ch 
+{
+    border:1px solid #897cce;
+    padding:12px 35px;
+    margin:20px;
+    background-color: white;
+    color:#8572e6;
+    border-radius: 5px;
+}

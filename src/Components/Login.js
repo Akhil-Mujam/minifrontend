@@ -3,7 +3,7 @@ import './Login.css';
 import axios from 'axios';
 import swal from 'sweetalert';
 import { TextField } from '@mui/material';
-
+import {Link} from 'react-router-dom';
 const Login = () => {
   const [email,setemail] = useState('')
   const [password,setpassword] = useState('')
@@ -65,36 +65,41 @@ const Login = () => {
   }
   return (
     <div >
-         <div class="row d-flex align-items-center justify-content-between">
-      <div class="col-md-5 ">
-         <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-135.jpg?w=2000" alt="..error" class="img-responsive h-auto w-100 " />
-      </div>
+         <div class="row d-flex align-items-center justify-content-center">
+          
       <div class="col-md-6">
-
-      <div class="container login  text-warning text-center " >
-         <h2 class="text-success"><strong>Welcome</strong></h2>  
+      <br/><br/><br/><br/>
+      <div class="container login text-center" >
+         <h2 class=" colr text-center"><strong>Welcome</strong></h2>  
          <br/>
          <br/>
          <form >
-       <div class="row justify-content-between">
+       <div class="row justify-content-between g">
          <div class="col-md-8">
          <TextField id="standard-basic" fullWidth label="Email" FullWidth required placeholder="enter your email" onChange={(e) =>{ setemail(e.target.value)}} variant="standard" />
              {/* <input type="email"  class="form-control mx-auto w-70 text-center"  name='email'   required placeholder="enter your email"  onChange={(e) =>{setemail(e.target.value)}}/> */}
              </div>
            </div>
         <br/>
-        <div class="row justify-content-between">
+        <div class="row justify-content-between g">
             <div class="col-md-8">
             <TextField id="standard-basic" fullWidth type="password" label="password" variant="standard" placeholder="enter password" required onChange={(e) =>{ setpassword(e.target.value)}}/>
                   {/* <input type="password"  class="form-control mx-auto text-center w-70" required  name='password' placeholder="enter password" onChange={(e) =>{ setpassword(e.target.value)}}/> */}
             </div>
         </div>
-        <br/>
-        <div class="row justify-content-between">
+        <br/><br/>
+        <div class="row justify-content-between g">
             <div class="col-md-8">
-             <button class="btn btn-success ml-2" onClick={submitHandler}>LOGIN</button>
+             <button class="ch" onClick={submitHandler}>Login</button>
             </div>
         </div>
+        <br/>
+        <div class="row justify-content-between g">
+            <div class="col-md-8">
+            <Link to="/register" class="links">New User ? Register Now</Link>
+            </div>
+        </div>
+
         </form>
     
       </div>

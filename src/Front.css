@@ -1,13 +1,66 @@
-.background{
-    height: 100%;
-    width:100%;
-    background-image: url('main-1.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+#neubar {
+    background: #aa9fe4;
+    box-shadow: 4px 6px 12px rgba(0,0,0,0.4)
+  }
+.links{
+    text-decoration: none;
+    color:rgb(46, 45, 45);
+}
+.ch 
+{
+    border:1px solid #897cce;
+    padding:12px 35px;
+    margin:20px;
+    background-color: white;
+    color:#8572e6;
+    border-radius: 5px;
+}
+.ch:hover{
+    border:white;
+    background-color: #907fe6;
+    color:white;
+}
+  
+  .nav-item .active {
+    border-radius: 6px;
+    background: linear-gradient(145deg, #897cce, #a398da);
     
-}
+  }
+  #neubar .dropdown-menu a:hover {
+    color: #454545
+  }
+  #neubar .nav-item {
+    margin : auto 4px;
+  }
+  #neubar a {
+  
+    padding-left:12px;
+    padding-right:12px;
+  }
+  #neubar .dropdown-menu {
+    background : #545454
+  }
+  a.navbar-brand {
+    color: #454545
+  }
 
-.cd{
-    width:10vw;
-    height: 100vh;
-}
+  
+.social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+  }
+  
+  .social-link:hover,
+  .social-link:focus {
+    background: #ddd;
+    text-decoration: none;
+    color: #555;
+  }

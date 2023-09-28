@@ -49,6 +49,7 @@ const Diabetis = () => {
       }).then(
         (arr) =>{
           console.log(arr.data)
+
         }
       )
       }
@@ -126,6 +127,11 @@ const Diabetis = () => {
         <button type="submit" class="btn btn-success mt-3 d-flex justify-content-center ">Submit</button>
       </form>
       </div>
+      <div>
+          <center><h1>{result}</h1> </center>
+          {/* {result === "The Person has Diabetes" ? <div><h4>Diet recommendation</h4></div> : null} */}
+      </div>
+     
     {/* <form onSubmit={SubmitHandler}>
         <div>
       <label>No_Of_Pregnancies</label>

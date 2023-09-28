@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-
+import React, { useState,useEffect } from 'react'
+import './styles.css'
 import axios from 'axios'
 
 const HeartData = () => {
-
+   const token = localStorage.getItem("token");
     const[result,setresult] = useState('')
 
    const [age,setage] = useState('')
@@ -22,8 +22,13 @@ const HeartData = () => {
    const[thal,setthal]= useState('')
 
 //    #input_list = [age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]
-    const SubmitHandler = (e) =>{
-        e.preventDefault();
+    const SubmitHandler = async(e) =>{
+      e.preventDefault();
+        let id;
+        const ids = await axios.get(`http://localhost:5000/getuserId/${token}`).then((r)=>{
+            console.log(r);
+            id = r.data._id;
+        })
         const endpoint="http://localhost:8000/heartprediction"
         axios.post(endpoint,{
             age:age,
@@ -44,8 +49,9 @@ const HeartData = () => {
             (res) =>{
                 console.log(res.data)
                 setresult(res.data)
-                
+                const storeres = res.data;
                 axios.post('http://localhost:5000/heartdata',{
+                userid:id,
                 age:age,
             sex:sex,
             cp:cp,
@@ -59,7 +65,7 @@ const HeartData = () => {
             slope:slope,
             ca:ca,
             thal:thal,
-            result:result
+            result:storeres
                 }).then(
                     (arr)=>{
                         console.log(arr.data)

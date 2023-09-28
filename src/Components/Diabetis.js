@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 
 const Diabetis = () => {
-
+    const token = localStorage.getItem("token");
     const [Preg,setpreg] = useState('')
     const [glu,setglucose] = useState('')
     const [bp,setbp] = useState('')
@@ -13,28 +13,30 @@ const Diabetis = () => {
     const [age,setage]= useState('')
    const [result,setresult] = useState('')
     // const[info,setinfo]=useState('')
-   const SubmitHandler =(e) =>{
+   const SubmitHandler = async(e) =>{
     e.preventDefault();
-    const endpoint="http://localhost:8000/diabetesprediction"
+    let id;
+    const ids = await axios.get(`http://localhost:5000/getuserId/${token}`).then((r)=>{
+        console.log(r);
+        id = r.data._id;
+    })
+    const endpoint="http://localhost:8000/diabetesprediction";
     axios.post(endpoint,{
-          Preg:Preg,
-          glu:glu,
-          bp:bp,
-          skt:skt,
-          ins:ins,
-          bmi:bmi,
-          dpf:dpf,
-          age:age
+          Pregnancies:Preg,
+          Glucose:glu,
+          BloodPressure:bp,
+          SkinThickness:skt,
+          Insulin:ins,
+          BMI:bmi,
+          DiabetesPedigreeFunction:dpf,
+          Age:age
     }).then(
       (res)=>{
         console.log(res.data)
-        
+        const resultStore = res.data;
         setresult(res.data)
-        // if(result=='The Person has Diabetes')
-        // {
-        //    setinfo("person")
-        // }
       axios.post('http://localhost:5000/diabetisdata',{
+        userid:id,
         Preg:Preg,
           glu:glu,
           bp:bp,
@@ -43,7 +45,7 @@ const Diabetis = () => {
           bmi:bmi,
           dpf:dpf,
           age:age,
-          result:result
+          result:resultStore
       }).then(
         (arr) =>{
           console.log(arr.data)

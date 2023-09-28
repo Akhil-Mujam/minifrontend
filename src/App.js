@@ -13,12 +13,12 @@ const App = () => {
        <BrowserRouter>
        <Routes>
          <Route  exact path="/" element={<Frontpage/>} />
-          <Route exact path="/login" element={<Login/>}/>
-          <Route exact path="/register" element={<Register/>}/>
-          <Route exact path="/dashboard" element={<Dashboard/>} />
-          <Route exact path="/heart" element={<HeartData/>} />
-          <Route exact path= "/liver" element={<Liver/>}/>
-          <Route exact path ="/diabetis"element={<Diabetis/>}/>
+          <Route exact path="/auth/login" element={<Login/>}/>
+          <Route exact path="/auth/register" element={<Register/>}/>
+          <Route exact path="/user/dashboard" element={<Dashboard/>} />
+          <Route exact path="/user/heart-pred" element={<HeartData/>} />
+          <Route exact path= "/user/liver-pred" element={<Liver/>}/>
+          <Route exact path ="/user/diabetis-pred"element={<Diabetis/>}/>
        </Routes>
        </BrowserRouter>
     </div>

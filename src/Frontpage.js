@@ -22,10 +22,10 @@ const Frontpage = () => {
             <Link to="/about" class="links">About</Link>
             </li>
             <li class="nav-item">
-              <Link to="/login" class="links">Login</Link>
+              <Link to="/auth/login" class="links">Login</Link>
             </li>
             <li class="nav-item">
-               <Link to="/register" class="links">Sign Up</Link>
+               <Link to="/auth/register" class="links">Sign Up</Link>
             </li>
           </ul>
         </div>
@@ -38,7 +38,7 @@ const Frontpage = () => {
       <div class="col-lg-6">
         <h1 class="display-4">Diet Recommendation and Multiple Disease Prediction System</h1>
         <p class="lead text-muted mb-0">The Proposed Model predicts diseases like Heart,Diabetes etc and provides the certain diet recommendations to the users.</p><br/>
-        <Link to="/login"><button type="button" class="ch">Try Out</button></Link>
+        <Link to="/auth/login"><button type="button" class="ch">Try Out</button></Link>
       </div>
       <div class="col-lg-6 d-none d-lg-block"><img src="https://bootstrapious.com/i/snippets/sn-about/illus.png" alt="" class="img-fluid" /></div>
     </div>
@@ -71,7 +71,7 @@ const Frontpage = () => {
       <div class="col-xl-4 col-sm-6 mb-5">
         <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://scitechdaily.com/images/Heart-Disease-Concept.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
           <h5 class="mb-0">Heart Disease Prediction</h5><span class="small text-uppercase text-muted">
-          <Link to="/login"><button type="button" class="ch">Check Now</button></Link>
+          <Link to="/auth/login"><button type="button" class="ch">Check Now</button></Link>
           </span>
         </div>
       </div>
@@ -79,7 +79,7 @@ const Frontpage = () => {
       <div class="col-xl-4 col-sm-6 mb-5">
         <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://baptisthealthforyou.files.wordpress.com/2014/11/istock_000034390542_large.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
           <h5 class="mb-0">Diabetes Prediction</h5><span class="small text-uppercase text-muted">
-          <Link to="/login"><button type="button" class="ch">Check Now</button></Link>
+          <Link to="/auth/login"><button type="button" class="ch">Check Now</button></Link>
           </span>
         </div>
       </div>
@@ -87,7 +87,7 @@ const Frontpage = () => {
       <div class="col-xl-4 col-sm-6 mb-5">
         <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://blog.mamashealth.com/wp-content/uploads/2018/05/liver.jpg" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm" />
           <h5 class="mb-0">Liver</h5><span class="small text-uppercase text-muted">
-          <Link to="/login"><button type="button" class="ch">Check Now</button></Link>
+          <Link to="/auth/login"><button type="button" class="ch">Check Now</button></Link>
           </span>
         </div>
       </div>

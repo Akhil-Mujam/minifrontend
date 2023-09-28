@@ -2,15 +2,15 @@ import React from 'react'
 
 const Dashboard = () => {
     const HeartSubmit = () =>{
-        window.location = "/heart"
+        window.location = "/user/heart-pred"
     }
 
     const DisSubmit = () =>{
-      window.location = '/diabetis'
+      window.location = '/user/diabetis-pred'
     }
 
     const LiverSubmit = () =>{
-      window.location = '/liver'
+      window.location = '/user/liver-pred'
     }
   return (
     <div>
@@ -36,3 +36,5 @@ const Dashboard = () => {
 }
 
 export default Dashboard
+
+

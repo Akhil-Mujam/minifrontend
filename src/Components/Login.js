@@ -54,7 +54,7 @@ const Login = () => {
                          icon:"success",
                          button:"Go to Dashboard"
                           }).then(function() {
-                         window.location ="/dashboard"
+                         window.location ="/user/dashboard"
                         })
                   }
 

@@ -7,6 +7,7 @@ import HeartData from './Components/HeartData'
 import Liver from './Components/Liver'
 import Diabetis from './Components/Diabetis';
 import Frontpage from './Frontpage';
+import Display from './Components/Display';
 const App = () => {
   return (
     <div>
@@ -19,6 +20,7 @@ const App = () => {
           <Route exact path="/user/heart-pred" element={<HeartData/>} />
           <Route exact path= "/user/liver-pred" element={<Liver/>}/>
           <Route exact path ="/user/diabetis-pred"element={<Diabetis/>}/>
+          <Route exact path="/user/history" element={<Display/>}/>
        </Routes>
        </BrowserRouter>
     </div>

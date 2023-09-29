@@ -1,6 +1,23 @@
 import React from 'react'
-
+import { useEffect,useState } from 'react'
+import axios from 'axios'
+import Nav from './Nav'
 const Dashboard = () => {
+
+     const dat = localStorage.getItem('token')
+     const [name,setname] = useState();
+
+     useEffect(() =>{
+      
+          axios.get('http://localhost:5000/getuserId/'+dat).then(
+            (res) =>{
+              console.log(res.data)
+              setname(res.data.name)
+            }
+          )
+     },[])
+     
+
     const HeartSubmit = () =>{
         window.location = "/user/heart-pred"
     }
@@ -14,6 +31,10 @@ const Dashboard = () => {
     }
   return (
     <div>
+      <Nav/>
+      <div class="continer my-4">
+         <h1>Welcome {name}</h1>
+      </div>
       <div class="container my-5">
       <center><h2>Get your Disease Predicted</h2></center>
     

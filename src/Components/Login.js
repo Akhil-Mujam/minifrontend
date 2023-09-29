@@ -16,10 +16,11 @@ const Login = () => {
                 password:password
               }).then(
                 (res) =>{
-                  console.log(res.data)
+                  console.log(res)
 
                   if(res.data == "user not found")
                   {
+                    
                     swal({
                       title:"Opps",
                       text:"User not found",
